@@ -1,0 +1,46 @@
+//   ========================== Base ==========================
+
+body {
+  color: $black;
+  padding: 20px 0;
+}
+
+#content {
+  @extend %wrapper;
+
+  @media only screen and (min-width : $breakpoint-tablet) {
+    max-width: $breakpoint-tablet;
+  }
+
+  @media only screen and (min-width : $breakpoint-desktop) {
+    max-width: $breakpoint-desktop;
+  }
+}
+
+.hidden {
+  @extend %hidden;
+}
+
+table {
+  border: 1px solid $silver;
+  width: 100%;
+
+  th {
+    background: $alto;
+    border: 1px solid $silver;
+    font-size: $font-size-medium;
+    padding: 5px 8px;
+    text-align: left;
+  }
+
+  td {
+    border: 1px solid $silver;
+    font-size: $font-size-medium;
+    padding: 5px 8px;
+  }
+
+  tr {
+    @extend %zebra-row;
+  }
+}
+
